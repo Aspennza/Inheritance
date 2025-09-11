@@ -39,6 +39,27 @@ public class Worker extends Person
         return super.toCSV() + ", " + hourlyPayRate;
     }
 
+    @Override
+    public String toJSON()
+    {
+        String retString = "";
+        char DQ = '\u0022';
+        retString = "{" + DQ + "IDNum" + DQ + ":" + DQ + this.getID() + DQ + ",";
+        retString += " " + DQ + "firstName" + DQ + ":" + DQ + this.getFirstName() + DQ + ",";
+        retString += " " + DQ + "lastName" + DQ + ":" + DQ + this.getLastName() + DQ + ",";
+        retString += " " + DQ + "title" + DQ + ":" + DQ + this.getTitle() + DQ + ",";
+        retString += " " + DQ + "YOB" + DQ + ":" + this.getYOB() + ",";
+        retString += " " + DQ + "hourlyPayRate" + DQ + ":" + hourlyPayRate + "}";
+
+        return retString;
+    }
+
+    @Override
+    public String toXML()
+    {
+
+    }
+
     public double calculateWeeklyPay(double hoursWorked)
     {
         double weeklyPay = 0.00;
