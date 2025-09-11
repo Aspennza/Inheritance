@@ -2,7 +2,9 @@ import java.util.Calendar;
 import java.util.Objects;
 
 //Need to:
+//finish main class
 //create WorkerTest.java & SalaryWorkerTest.java
+//create UML class diagrams
 //check if you need to override equals
 //check if there's a way to have a second constructor for salaryworker
 
