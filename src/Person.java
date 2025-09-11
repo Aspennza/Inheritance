@@ -1,6 +1,10 @@
 import java.util.Calendar;
 import java.util.Objects;
 
+//Need to:
+//create WorkerTest.java & SalaryWorkerTest.java
+//check if you need to override equals
+
 /**
  * Allows the creation of objects representing personal data, including an ID number,
  * first name, last name, title, and year of birth. Also includes functions for acting
