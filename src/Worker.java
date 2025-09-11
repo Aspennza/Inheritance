@@ -57,7 +57,16 @@ public class Worker extends Person
     @Override
     public String toXML()
     {
+        String retString = "";
+        retString = "<Worker>";
+        retString += "<IDNum>" + this.getID() + "</IDNum>";
+        retString += "<firstName>" + this.getFirstName() + "</firstName>";
+        retString += "<lastName>" + this.getLastName() + "</lastName>";
+        retString += "<title>" + this.getTitle() + "</title>";
+        retString += "<YOB>" + this.getYOB() + "</YOB>";
+        retString += "<hourlyPayRate>" + hourlyPayRate + "</hourlyPayRate></Worker>";
 
+        return retString;
     }
 
     public double calculateWeeklyPay(double hoursWorked)
