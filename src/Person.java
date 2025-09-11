@@ -4,6 +4,7 @@ import java.util.Objects;
 //Need to:
 //create WorkerTest.java & SalaryWorkerTest.java
 //check if you need to override equals
+//check if there's a way to have a second constructor for salaryworker
 
 /**
  * Allows the creation of objects representing personal data, including an ID number,
