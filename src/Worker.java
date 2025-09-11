@@ -126,6 +126,6 @@ public class Worker extends Person
         System.out.println("Hours Regular Pay          Regular Pay Total          Hours Overtime          Overtime Pay Total          Combined Pay");
         System.out.println("======================================================================================================================");
 
-        System.out.printf("\n%-27s%-27f%-24s%-28f%6f", hoursAtRegularRate, payRegularRate, hoursOvertime, payOvertime, combinedPay);
+        System.out.printf("%-27s%-27f%-24s%-28f%6f", hoursAtRegularRate, payRegularRate, hoursOvertime, payOvertime, combinedPay);
     }
 }

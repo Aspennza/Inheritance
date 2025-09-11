@@ -1,4 +1,5 @@
 //Need to:
+//create Main class
 //create WorkerTest.java & SalaryWorkerTest.java
 //check if you need to override equals
 //check if there's a way to have a second constructor for salaryworker
@@ -64,5 +65,28 @@ public class SalaryWorker extends Worker
         retString += "<annualSalary>" + annualSalary + "</annualSalary></SalaryWorker>";
 
         return retString;
+    }
+
+    @Override
+    public double calculateWeeklyPay(double hoursWorked)
+    {
+        double weeklyPay = 0.00;
+
+        weeklyPay = annualSalary/52;
+
+        return weeklyPay;
+    }
+
+    @Override
+    public void displayWeeklyPay(double hoursWorked)
+    {
+        double weeklyPay = 0.00;
+
+        weeklyPay = annualSalary/52;
+
+        System.out.println("Weekly Pay (fraction of yearly salary)");
+        System.out.println("======================================");
+
+        System.out.printf("%-38f", weeklyPay);
     }
 }
