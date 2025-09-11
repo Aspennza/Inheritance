@@ -1,6 +1,6 @@
 public class Worker extends Person
 {
-   private double hourlyPayRate;
+    private double hourlyPayRate;
 
     public Worker(String ID, String firstName, String lastName, String title, int YOB, double hourlyPayRate)
     {
@@ -15,6 +15,14 @@ public class Worker extends Person
                 person.getLastName(),
                 person.getTitle(),
                 person.getYOB());
+        this.hourlyPayRate = hourlyPayRate;
+    }
+
+    public double getHourlyPayRate() {
+        return hourlyPayRate;
+    }
+
+    public void setHourlyPayRate(double hourlyPayRate) {
         this.hourlyPayRate = hourlyPayRate;
     }
 }
