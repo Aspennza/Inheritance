@@ -26,6 +26,19 @@ public class Worker extends Person
         this.hourlyPayRate = hourlyPayRate;
     }
 
+    @Override
+    public String toString() {
+        return super.toString() + "Worker{" +
+                "hourlyPayRate=" + hourlyPayRate +
+                '}';
+    }
+
+    @Override
+    public String toCSV()
+    {
+        return super.toCSV() + ", " + hourlyPayRate;
+    }
+
     public double calculateWeeklyPay(double hoursWorked)
     {
         double weeklyPay = 0.00;
