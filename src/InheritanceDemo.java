@@ -1,5 +1,4 @@
 //Need to:
-//finish main class
 //create WorkerTest.java & SalaryWorkerTest.java
 //create UML class diagrams
 //check if you need to override equals
@@ -30,7 +29,7 @@ public class InheritanceDemo
         workers.add(johnny);
         workers.add(nancy);
 
-        System.out.println("Week        John's Pay        Jane's Pay        Sally's Pay        Bella's Pay        Johnny's Pay        Nancy's Pay");
+        System.out.println("\nWeek        John's Pay        Jane's Pay        Sally's Pay        Bella's Pay        Johnny's Pay        Nancy's Pay");
         System.out.print("=====================================================================================================================");
 
         do {
@@ -45,12 +44,11 @@ public class InheritanceDemo
                 hoursWorked = 40;
             }
 
+            int printWeek = week + 1;
 
-            System.out.printf("\n%-12d%-18f%-18f%-19f%-19f%-20f%11f", week, john.calculateWeeklyPay(hoursWorked), jane.calculateWeeklyPay(hoursWorked), sally.calculateWeeklyPay(hoursWorked), bella.calculateWeeklyPay(hoursWorked), johnny.calculateWeeklyPay(hoursWorked), nancy.calculateWeeklyPay(hoursWorked));
+            System.out.printf("\n%-12d%-18f%-18f%-19f%-19f%-20f%11f", printWeek, john.calculateWeeklyPay(hoursWorked), jane.calculateWeeklyPay(hoursWorked), sally.calculateWeeklyPay(hoursWorked), bella.calculateWeeklyPay(hoursWorked), johnny.calculateWeeklyPay(hoursWorked), nancy.calculateWeeklyPay(hoursWorked));
 
             week++;
         }while(week < 3);
-
-        //create the weekly pay periods loop here
     }
 }
