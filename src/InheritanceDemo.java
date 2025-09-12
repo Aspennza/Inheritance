@@ -1,7 +1,8 @@
 //Need to:
 //create WorkerTest.java & SalaryWorkerTest.java
-//create UML class diagrams
 //write JavaDoc
+//create UML class diagrams
+//take screenshots and turn in
 
 import java.util.ArrayList;
 

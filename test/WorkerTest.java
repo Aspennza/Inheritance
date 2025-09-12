@@ -85,37 +85,44 @@ class WorkerTest {
 
     @Test
     void setHourlyPayRate() {
+        worker1.setHourlyPayRate(25.00);
+        assertEquals(25.00, worker1.getHourlyPayRate());
     }
 
     @Test
     void testToString() {
+        assertEquals("Person{ID='000001', firstName='John', lastName='Doe', title='Mr.', YOB=1980}Worker{hourlyPayRate=20.0}", worker1.toString());
     }
 
     @Test
     void testEquals() {
+        assertTrue(worker1.equals(worker1));
+        assertFalse(worker2.equals(worker1));
     }
 
     @Test
     void testHashCode() {
+        assertEquals(-523391361, worker1.hashCode());
     }
 
     @Test
     void toCSV() {
+        assertEquals("000001, John, Doe, Mr., 1980, 20.0", worker1.toCSV());
     }
 
     @Test
     void toJSON() {
+        assertEquals("{\"IDNum\":\"000001\", \"firstName\":\"John\", \"lastName\":\"Doe\", \"title\":\"Mr.\", \"YOB\":1980, \"hourlyPayRate\":20.0}", worker1.toJSON());
     }
 
     @Test
     void toXML() {
+        assertEquals("<Worker><IDNum>000001</IDNum><firstName>John</firstName><lastName>Doe</lastName><title>Mr.</title><YOB>1980</YOB><hourlyPayRate>20.0</hourlyPayRate></Worker>", worker1.toXML());
     }
 
     @Test
     void calculateWeeklyPay() {
-    }
-
-    @Test
-    void displayWeeklyPay() {
+        assertEquals(800.00, worker1.calculateWeeklyPay(40));
+        assertEquals(1100.00, worker1.calculateWeeklyPay(50));
     }
 }
