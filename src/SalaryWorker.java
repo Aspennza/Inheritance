@@ -5,6 +5,8 @@
 //check if you need to override equals
 //check if there's a way to have a second constructor for salaryworker
 
+import java.util.Objects;
+
 public class SalaryWorker extends Worker
 {
     private double annualSalary;
@@ -28,6 +30,20 @@ public class SalaryWorker extends Worker
         return super.toString() + "SalaryWorker{" +
                 "annualSalary=" + annualSalary +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        SalaryWorker that = (SalaryWorker) o;
+        return getYOB() == that.getYOB() && Objects.equals(getID(), that.getID()) && Objects.equals(getFirstName(), that.getFirstName()) && Objects.equals(getLastName(), that.getLastName()) && Objects.equals(getTitle(), that.getTitle()) && getHourlyPayRate() == that.getHourlyPayRate() && annualSalary == that.annualSalary;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), annualSalary);
     }
 
     @Override
