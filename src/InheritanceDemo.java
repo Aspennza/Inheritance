@@ -12,6 +12,8 @@ public class InheritanceDemo
     public static void main(String[] args)
     {
         ArrayList<Worker> workers = new ArrayList<>();
+        int week = 0;
+        int hoursWorked = 0;
 
         Worker john = new Worker("000001", "John", "Doe", "Mr.", 1980, 25.00);
         Worker jane = new Worker("000002", "Jane", "Doe", "Ms.", 1979, 26.00);
@@ -27,6 +29,27 @@ public class InheritanceDemo
         workers.add(bella);
         workers.add(johnny);
         workers.add(nancy);
+
+        System.out.println("Week        John's Pay        Jane's Pay        Sally's Pay        Bella's Pay        Johnny's Pay        Nancy's Pay");
+        System.out.print("=====================================================================================================================");
+
+        do {
+            if(week == 0)
+            {
+                hoursWorked = 40;
+            }else if(week == 1)
+            {
+                hoursWorked = 50;
+            } else
+            {
+                hoursWorked = 40;
+            }
+
+
+            System.out.printf("\n%-12d%-18f%-18f%-19f%-19f%-20f%11f", week, john.calculateWeeklyPay(hoursWorked), jane.calculateWeeklyPay(hoursWorked), sally.calculateWeeklyPay(hoursWorked), bella.calculateWeeklyPay(hoursWorked), johnny.calculateWeeklyPay(hoursWorked), nancy.calculateWeeklyPay(hoursWorked));
+
+            week++;
+        }while(week < 3);
 
         //create the weekly pay periods loop here
     }
