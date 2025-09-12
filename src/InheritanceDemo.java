@@ -1,7 +1,7 @@
 //Need to:
 //create WorkerTest.java & SalaryWorkerTest.java
 //create UML class diagrams
-//check if there's a way to have a second constructor for salaryworker
+//write JavaDoc
 
 import java.util.ArrayList;
 
