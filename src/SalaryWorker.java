@@ -17,6 +17,17 @@ public class SalaryWorker extends Worker
         this.annualSalary = annualSalary;
     }
 
+    public SalaryWorker(Worker worker, double annualSalary)
+    {
+        super(worker.getID(),
+                worker.getFirstName(),
+                worker.getLastName(),
+                worker.getTitle(),
+                worker.getYOB(),
+                worker.getHourlyPayRate());
+        this.annualSalary = annualSalary;
+    }
+
     public double getAnnualSalary() {
         return annualSalary;
     }
