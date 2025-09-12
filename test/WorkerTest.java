@@ -41,35 +41,46 @@ class WorkerTest {
 
     @Test
     void setFirstName() {
-
+        worker1.setFirstName("Sally");
+        assertEquals("Sally", worker1.getFirstName());
     }
 
     @Test
     void setLastName() {
+        worker1.setLastName("Williams");
+        assertEquals("Williams", worker1.getLastName());
     }
 
     @Test
     void setTitle() {
+        worker1.setTitle("Mrs.");
+        assertEquals("Mrs.", worker1.getTitle());
     }
 
     @Test
     void setYOB() {
+        worker1.setYOB(1979);
+        assertEquals(1979, worker1.getYOB());
     }
 
     @Test
     void fullName() {
+        assertEquals("John Doe", worker1.fullName());
     }
 
     @Test
     void formalName() {
+        assertEquals("Mr. John Doe", worker1.formalName());
     }
 
     @Test
     void getAge() {
+        assertEquals("45", worker1.getAge());
     }
 
     @Test
     void testGetAge() {
+        assertEquals("20", worker1.getAge(2000));
     }
 
     @Test
