@@ -3,9 +3,16 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Tests the basic functionality of the functions in the SalaryWorker.java class.
+ * @author Zoe Aspenns aspennza@mail.uc.edu
+ */
 class SalaryWorkerTest {
 
+    //A SalaryWorker object for testing the functions
     SalaryWorker worker1;
+
+    //A SalaryWorker object for testing the functions
     SalaryWorker worker2;
 
     @BeforeEach

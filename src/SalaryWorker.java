@@ -1,22 +1,23 @@
-//Need to:
-//finish main class
-//create WorkerTest.java & SalaryWorkerTest.java
-//create UML class diagrams
-//check if you need to override equals
-//check if there's a way to have a second constructor for salaryworker
-
 import java.util.Objects;
 
+/**
+ * Creates SalaryWorker objects containing all the criteria from Worker but adding an annualSalary.
+ * Also includes functions for acting on said objects.
+ * @author Zoe Aspenns aspennza@mail.uc.edu
+ */
 public class SalaryWorker extends Worker
 {
+    //This double stores the annual salary for each SalaryWorker object
     private double annualSalary;
 
+    //This constructor creates SalaryWorker objects through manually inputting all the necessary data
     public SalaryWorker(String ID, String firstName, String lastName, String title, int YOB, double hourlyPayRate, double annualSalary)
     {
         super(ID, firstName, lastName, title, YOB, hourlyPayRate);
         this.annualSalary = annualSalary;
     }
 
+    //This constructor creates SalaryWorker objects given an existing Worker and an hourly pay rate
     public SalaryWorker(Worker worker, double annualSalary)
     {
         super(worker.getID(),
@@ -57,12 +58,20 @@ public class SalaryWorker extends Worker
         return Objects.hash(super.hashCode(), annualSalary);
     }
 
+    /**
+     * Takes the content of a SalaryWorker object and converts it into a CSV format.
+     * @return a String containing a comma-separated list of personal traits.
+     */
     @Override
     public String toCSV()
     {
         return super.toCSV() + ", " + annualSalary;
     }
 
+    /**
+     * Takes the content of a SalaryWorker object and converts it into a JSON format.
+     * @return a String containing personal traits listed in the JSON format.
+     */
     @Override
     public String toJSON()
     {
@@ -79,6 +88,10 @@ public class SalaryWorker extends Worker
         return retString;
     }
 
+    /**
+     * Takes the content of a SalaryWorker object and converts it into XML format.
+     * @return a String containing personal traits listed in the XML format.
+     */
     @Override
     public String toXML()
     {
@@ -95,6 +108,11 @@ public class SalaryWorker extends Worker
         return retString;
     }
 
+    /**
+     * Calculates a SalaryWorker's weekly pay by dividing their annual salary by 52 weeks.
+     * @param hoursWorked   The number of hours a SalaryWorker worked in a week.
+     * @return    The amount of money a SalaryWorker was paid in a week.
+     */
     @Override
     public double calculateWeeklyPay(double hoursWorked)
     {
@@ -105,6 +123,10 @@ public class SalaryWorker extends Worker
         return weeklyPay;
     }
 
+    /**
+     * Calculates and prints a SalaryWorker's weekly pay to the console in a tabular format.
+     * @param hoursWorked    The number of hours a SalaryWorker worked in a week.
+     */
     @Override
     public void displayWeeklyPay(double hoursWorked)
     {

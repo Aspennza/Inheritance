@@ -3,9 +3,16 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Tests the basic functionality of the functions in the Worker.java class.
+ * @author Zoe Aspenns aspennza@mail.uc.edu
+ */
 class WorkerTest {
 
+    //A Worker object for testing the functions
     Worker worker1;
+
+    //A Worker object for testing the functions
     Worker worker2;
 
     @BeforeEach
