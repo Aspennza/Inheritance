@@ -1,5 +1,4 @@
 //Need to:
-//write JavaDoc
 //create UML class diagrams
 //take screenshots and turn in
 
